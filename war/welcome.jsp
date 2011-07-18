@@ -11,6 +11,6 @@
   <script type="text/javascript">
       top.location="http://graph.renren.com/oauth/authorize?client_id=${requestScope.appId}&response_type=token&display=page&redirect_uri=" + encodeURIComponent("http://apps.renren.com/yfoxyiest/home");
   </script>
-  Hi, Welcome! yfox! 我是迷糊的小狐狸吗?<img src="http://app.xnimg.cn/application/20110717/08/25/L3wEC61n018153.jpg"/>!!
+  Hi, Welcome! yfox! 我是迷糊的小狐狸吗?!!
 </body>
 </html>

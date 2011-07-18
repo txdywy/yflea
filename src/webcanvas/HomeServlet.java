@@ -22,6 +22,7 @@ public class HomeServlet extends HttpServlet {
 		String renrenUserId = request.getParameter("xn_sig_user");
 		if (sessionKey != null && renrenUserId != null) {
 			RenrenApiClient apiClient = new RenrenApiClient(sessionKey);
+			//获取用户信息
 			JSONArray userInfo = apiClient.getUserService().getInfo(renrenUserId, "name,headurl");
 			if (userInfo != null && userInfo.size() > 0) {
 				JSONObject currentUser = (JSONObject) userInfo.get(0);
@@ -32,6 +33,9 @@ public class HomeServlet extends HttpServlet {
 					request.setAttribute("userHead", userHead);
 				}
 			}
+			//获取好友列表数据
+			JSONArray friendsList = apiClient.getFriendsService().getFriends(1, 100);//最多取30个好友
+			request.setAttribute("friendsList", friendsList);
 		}
 		request.setAttribute("appId", AppConfig.APP_ID);
 		RequestDispatcher welcomeDispatcher = request.getRequestDispatcher("/home.jsp");
