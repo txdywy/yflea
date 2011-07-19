@@ -9,7 +9,7 @@
 </head>
 <body>
   <script type="text/javascript">
-      top.location="http://graph.renren.com/oauth/authorize?client_id=${requestScope.appId}&response_type=token&display=page&redirect_uri=" + encodeURIComponent("http://apps.renren.com/yfoxyiest/home");
+      top.location="http://graph.renren.com/oauth/authorize?client_id=${requestScope.appId}&response_type=token&display=page&redirect_uri=" + encodeURIComponent("http://apps.renren.com/yfleabite/home");
   </script>
   Hi, Welcome! yfox! 我是迷糊的小狐狸吗?!!
 </body>
