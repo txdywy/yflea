@@ -34,7 +34,7 @@ public class HomeServlet extends HttpServlet {
 				}
 			}
 			//获取好友列表数据
-			JSONArray friendsList = apiClient.getFriendsService().getFriends(1, 100);//最多取30个好友
+			JSONArray friendsList = apiClient.getFriendsService().getFriends(1, 250);//最多取30个好友
 			request.setAttribute("friendsList", friendsList);
 		}
 		request.setAttribute("appId", AppConfig.APP_ID);
